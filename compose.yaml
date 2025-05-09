@@ -1,0 +1,10 @@
+version: '1'
+services:
+ app:
+  build:
+   dockerfile: ./node-web-app
+  container_name: kubernetes-calc
+  restart: always
+  ports:
+   - 4026:8080
+  command: node /usr/src/app/app.js
